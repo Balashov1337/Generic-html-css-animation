@@ -32,8 +32,8 @@ int main()
             fout << "-webkit-transform: translate(" << x << "px" << "," << y << "px" << "); \n";
             fout << "transform: translate(" << x << "px" << "," << y << "px" << "); \n";
             time = rand()%1000;  
-            fout << "-webkit-animation-delay: 0." << time << ";\n";
-            fout << "animation-delay: 0." << time << ";\n}\n\n";
+            fout << "-webkit-animation-delay: 0." << time << "s;\n";
+            fout << "animation-delay: 0." << time << "s;\n}\n\n";
             x = x + pixblock;
             count++;
         }
@@ -51,10 +51,10 @@ int main()
             if (xi < 10) {
                 fout << "<span class=$loader-block$><img src=$img/image_part_00" << xi << ".png$></span>\n";
             }
-            if (xi > 10 && xi<100 ) {
+            if (xi >= 10 && xi<100 ) {
                 fout << "<span class=$loader-block$><img src=$img/image_part_0" << xi << ".png$></span>\n";
             }
-            if (xi > 100) {
+            if (xi >= 100) {
                 fout << "<span class=$loader-block$><img src=$img/image_part_" << xi << ".png$></span>\n";
             }
             xi++;
